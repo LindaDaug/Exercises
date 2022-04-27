@@ -19,7 +19,26 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+        // 1. Ja cigāru skaits ir zem 40 tad atgriežam false
+        if (cigars < 40)
+        {
+            return false;
+        }
+
+        // 2. Ja ir brīvdiena tad atgriežam vērtību true
+        if (isWeekend)
+        {
+            return true;
+        }
+
+        // 3. Ja cigāru skaits ir zem 60 tad atgriežam vērtību true (zinām jau, ka nav brīvdeina)
+        if (cigars <= 60)
+        {
+            return true;
+        }
+
+        // 4. Visos citos gadījumos atgriežam false
+        return false;
     }
 
     /// <summary>
