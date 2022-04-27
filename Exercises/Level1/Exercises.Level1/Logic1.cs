@@ -83,7 +83,29 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        // 1. Ja temperatūra ir virs 60 un zem 90 (nav vasara), tad atgriežam vērtību true
+        if (temp < 60)
+        {
+            return false;
+        }
+
+        int maxTemp = 90;
+
+        if (isSummer)
+
+        {
+            maxTemp += 10;
+        }
+
+
+        // 2. Ja temperatūra ir virs 60 un zem 100 un ir vasara, tad atgriežam vērtību true
+        if (temp <= maxTemp)
+        {
+            return true;
+        }
+
+        // 3. citādi false
+        return false;
     }
 
     /// <summary>
