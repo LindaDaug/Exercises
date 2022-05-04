@@ -70,8 +70,7 @@ public class Logic1
         // 3. Citādi atgriežam vērību 1
         return 1;
     }
-
-    /// <summary>
+        /// <summary>
     /// The squirrels in Palo Alto spend most of the day playing. In particular, they play if the
     /// temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is
     /// 100 instead of 90. Given an int temperature and a boolean isSummer, return true if the
@@ -121,8 +120,28 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        // visos gadījumos ja is dzimšanas diena, tad ātrums varbūt par 5 lielāks
+        
+        if (isBirthday)
+        {
+            speed -= 5;
+        }
+        // ja ātrums līdz 60 ticket 0
+        
+        if (speed <= 60)
+        { 
+            return 0;
+        }
+        
+        // ja ātrums >= 81 ticket 2, 
+        if (speed >= 81)
+        { 
+            return 2;
+        }
+        // citos gadījumos 1
+        return 1;
     }
+
 
     /// <summary>
     /// Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are
