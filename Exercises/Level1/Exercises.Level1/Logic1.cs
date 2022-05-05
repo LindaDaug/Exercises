@@ -176,7 +176,26 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        
+        string early = "7:00";
+        string late = "10:00";
+        string off = "off";
+        
+        if (day == 0 || day == 6)
+      
+        {
+            if (vacation)
+            {
+                return off;
+            }
+        return late;    
+        }
+        
+        if (vacation)
+        {
+            return late;
+        }
+    return early;
     }
 
     /// <summary>
@@ -190,8 +209,20 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
-    }
+        Math.abs (sum) = a + b;
+        if (a== 6 || b==6)
+        { 
+            if (sum == 6)
+            return true;
+        }
+        
+
+
+
+
+
+            return false;           
+     }
 
     /// <summary>
     /// Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
