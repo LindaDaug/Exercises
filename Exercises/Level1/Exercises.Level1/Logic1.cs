@@ -209,19 +209,15 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        Math.abs (sum) = a + b;
-        if (a== 6 || b==6)
+        int sum = a + b;
+        int dif = a - b;
+        int dif1 = Math.Abs(dif);
+        if (a== 6 || b==6 || sum==6 || dif1 == 6)
         { 
-            if (sum == 6)
-            return true;
+          return true;
         }
         
-
-
-
-
-
-            return false;           
+     return false;           
      }
 
     /// <summary>
