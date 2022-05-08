@@ -253,25 +253,8 @@ public class Logic1
             return true;
     }
     
-               
-    // {
-    //    if (outsideMode == false)
-    //    {
-    //        if (n >= 1 && n <= 10)
-    //        {
-    //            return true;
-    //        }
-    //        return false;
-    //    }
-    //    else
-    //    {
-    //        if (n >= 1 && n <= 9)
-    //        {
-    //            return false;               
-    //        }
-    //    }
-    //    return true;
-    //}
+              
+  
 
     /// <summary>
     /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
@@ -283,7 +266,12 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        throw new NotImplementedException();
+        
+       if (n % 11 == 0 || n % 11 == 1 && n > 0)
+            {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -295,8 +283,10 @@ public class Logic1
     /// more20(22) → true
     /// </summary>
     public bool More20(int n)
-    {
-        throw new NotImplementedException();
+    {   
+        if (n > 0  && n % 20>=1 && n % 20 <= 2)
+        { return true; }
+       return false;
     }
 
     /// <summary>
