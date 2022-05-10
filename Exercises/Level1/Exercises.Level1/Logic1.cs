@@ -480,31 +480,10 @@ public class Logic1
         { return true; }
        else return false;
     }
-
-//    if(bOk)
-//        {
-//    if (c > b)
-//04
-//      return true;
-//05
-//    else
-//06
-//      return false;
-//07
-//  }
-//08
-//  if (b > a && c > b)
-//09
-//    return true;
-//10
-//  else
-//11
-//    return false;
-//12
-//}
+    
 
     /// <summary>
-    /// iven three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or
+    /// Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or
     /// 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true,
     /// equality is allowed, such as 5 5 7 or 5 5 5.
     /// 
@@ -513,9 +492,17 @@ public class Logic1
     /// inOrderEqual(5, 5, 7, true) → true
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
-    {
-        throw new NotImplementedException();
-    }
+
+    //{
+    //  if (bOk == true)
+    //        {
+    //        if (a! < b && b! < c)
+    //        { return true; }
+    //        else return false;}
+    //     if (a<b && b<c)
+    //    { return true; }
+    //     else return false;
+    // }
 
     /// <summary>
     /// Given three ints, a b c, return true if two or more of them have the same rightmost digit.
