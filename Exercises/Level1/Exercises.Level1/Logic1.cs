@@ -154,13 +154,13 @@ public class Logic1
     public int SortaSum(int a, int b)
     {
         //ja ciparu summa >=10 vai sum<=19 atgŗiežam  20
-        int sum =a +b;
+        int sum = a + b;
         if (sum >= 10 && sum <= 19)
         {
-         return 20;
+            return 20;
         }
-     // citādā gadījumā atgriežam summu
-     return sum;
+        // citādā gadījumā atgriežam summu
+        return sum;
     }
 
     /// <summary>
@@ -176,26 +176,26 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        
+
         string early = "7:00";
         string late = "10:00";
         string off = "off";
-        
+
         if (day == 0 || day == 6)
-      
+
         {
             if (vacation)
             {
                 return off;
             }
-        return late;    
+            return late;
         }
-        
+
         if (vacation)
         {
             return late;
         }
-    return early;
+        return early;
     }
 
     /// <summary>
@@ -212,13 +212,13 @@ public class Logic1
         int sum = a + b;
         int dif = a - b;
         int dif1 = Math.Abs(dif);
-        if (a== 6 || b==6 || sum==6 || dif1 == 6)
-        { 
-          return true;
+        if (a == 6 || b == 6 || sum == 6 || dif1 == 6)
+        {
+            return true;
         }
-        
-     return false;           
-     }
+
+        return false;
+    }
 
     /// <summary>
     /// Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
@@ -231,30 +231,30 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-     if (outsideMode == true)
+        if (outsideMode == true)
         {
             if (n <= 1 && n >= 10)
             {
-                return false ;
+                return false;
             }
         }
         {
-            if (n <1 && n >10)
-        {
-            return true ;
+            if (n < 1 && n > 10)
+            {
+                return true;
+            }
+
         }
-                
-        }
-    if (outsideMode == false)
+        if (outsideMode == false)
         {
             if (n <= 1 && n >= 10)
-            { return false ;}
+            { return false; }
         }
-            return true;
+        return true;
     }
-    
-              
-  
+
+
+
 
     /// <summary>
     /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
@@ -266,9 +266,9 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        
-       if (n % 11 == 0 || n % 11 == 1 && n > 0)
-            {
+
+        if (n % 11 == 0 || n % 11 == 1 && n > 0)
+        {
             return true;
         }
         return false;
@@ -283,10 +283,10 @@ public class Logic1
     /// more20(22) → true
     /// </summary>
     public bool More20(int n)
-    {   
-        if (n > 0  && n % 20>=1 && n % 20 <= 2)
+    {
+        if (n > 0 && n % 20 >= 1 && n % 20 <= 2)
         { return true; }
-       return false;
+        return false;
     }
 
     /// <summary>
@@ -299,9 +299,9 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-       if (n > 0 && (n % 3 == 0 && n % 5!= 0) || (n % 3 != 0 && n % 5 == 0))
+        if (n > 0 && (n % 3 == 0 && n % 5 != 0) || (n % 3 != 0 && n % 5 == 0))
         { return true; }
-       return false ;
+        return false;
     }
 
     /// <summary>
@@ -315,7 +315,7 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-     if ((n + 1) % 20 == 0 || (n + 2) % 20 == 0)
+        if ((n + 1) % 20 == 0 || (n + 2) % 20 == 0)
         { return true; }
         return false;
     }
@@ -331,7 +331,7 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        if ((num +1) % 10 == 0 || (num + 2) % 10 == 0 || (num -1) % 10 ==0 || (num - 2) % 10 == 0 || num % 10 == 0)
+        if ((num + 1) % 10 == 0 || (num + 2) % 10 == 0 || (num - 1) % 10 == 0 || (num - 2) % 10 == 0 || num % 10 == 0)
         { return true; }
         return false;
     }
@@ -348,7 +348,7 @@ public class Logic1
     {
         int sum = a + b;
 
-        if (a >=13 && a <=19 || b >=13 && b<=19)
+        if (a >= 13 && a <= 19 || b >= 13 && b <= 19)
         { return 19; }
         return sum;
     }
@@ -388,13 +388,13 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        if (tea >=5 && candy >=5)
-            { 
-            if (tea >= 2 *candy || candy >= 2 *tea)
-                { return 2; }
+        if (tea >= 5 && candy >= 5)
+        {
+            if (tea >= 2 * candy || candy >= 2 * tea)
+            { return 2; }
             return 1; }
         { return 0; }
-     
+
     }
 
     /// <summary>
@@ -436,7 +436,15 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        if ((n % 3 == 0) && (n % 5 == 0))
+        { return "FizzBuzz!"; }
+
+        else if (n % 3 == 0)
+        { return "Fizz!"; }
+        else if (n % 5 == 0)
+        { return "Buzz!"; }
+
+        else return Convert.ToString(n) + "!";
     }
 
     /// <summary>
@@ -448,7 +456,9 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a == b + c || b == a + c || c == a + b)
+        { return true; }
+        return false;
     }
 
     /// <summary>
@@ -461,8 +471,37 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        if (bOk == true)
+        {
+         if (c > b)
+            { return true; }
+        else return false; }
+        if (b > a && c > b)
+        { return true; }
+       else return false;
     }
+
+//    if(bOk)
+//        {
+//    if (c > b)
+//04
+//      return true;
+//05
+//    else
+//06
+//      return false;
+//07
+//  }
+//08
+//  if (b > a && c > b)
+//09
+//    return true;
+//10
+//  else
+//11
+//    return false;
+//12
+//}
 
     /// <summary>
     /// iven three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or
