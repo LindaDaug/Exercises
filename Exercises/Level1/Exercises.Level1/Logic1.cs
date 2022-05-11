@@ -231,32 +231,12 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        if (outsideMode == true)
-        {
-            if (n <= 1 && n >= 10)
-            {
-                return false;
-            }
-        }
-        {
-            if (n < 1 && n > 10)
-            {
-                return true;
-            }
-
-        }
-        if (outsideMode == false)
-        {
-            if (n <= 1 && n >= 10)
-            { return false; }
-        }
-        return true;
+        if (outsideMode) return n <= 1 || n >= 10;
+        return n >= 1 && n <= 10;
     }
 
 
-
-
-    /// <summary>
+        /// <summary>
     /// We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
     /// 11. Return true if the given non-negative number is special. Use the % "mod" operator.
     /// 
@@ -492,7 +472,9 @@ public class Logic1
     /// inOrderEqual(5, 5, 7, true) → true
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
-
+    {
+        throw new NotImplementedException();
+    }
     //{
     //  if (bOk == true)
     //        {
