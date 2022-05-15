@@ -175,7 +175,8 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int[] middle = {a[1], b[1]};
+        return middle;
     }
 
     /// <summary>
@@ -188,7 +189,9 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-        throw new NotImplementedException();
+       
+        int [] ends  = {nums [0], nums [nums.Length-1]};
+        return ends;
     }
 
     /// <summary>
