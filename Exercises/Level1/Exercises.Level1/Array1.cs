@@ -203,7 +203,9 @@ public class Array1
     /// </summary>
     public bool Has23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3)
+            return true;
+        return (nums[1] == 2 || nums[1] == 3); ;
     }
 
     /// <summary>
@@ -215,7 +217,9 @@ public class Array1
     /// </summary>
     public bool No23(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] == 2 || nums[0] == 3)
+            return false;
+        return !(nums[1] == 2 || nums[1] == 3);
     }
 
     /// <summary>
@@ -229,7 +233,10 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        throw new NotImplementedException();
+        int len = nums.Length * 2;
+        int[] array2 = new int[len];
+        array2[len - 1] = nums[nums.Length - 1];
+        return array2;
     }
 
     /// <summary>
