@@ -100,7 +100,7 @@ public class Array1
 
         foreach (var item in nums)
         {
-            // 2. Katrā iterācijā pieskai'tām sum mainīgajam katra elementa no masīva vērtību
+            // 2. Katrā iterācijā pieskaitām sum mainīgajam katra elementa no masīva vērtību
             sum += item;
         }
 
@@ -131,7 +131,7 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        return new int[] { nums[2], nums[1], nums[0] };
     }
 
     /// <summary>
@@ -144,7 +144,7 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        return new int[] { Math.Max(nums[0], nums[2]), Math.Max(nums[0], nums[2]), Math.Max(nums[0], nums[2]) };
     }
 
     /// <summary>
@@ -158,7 +158,11 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length >= 2)
+            return (nums[0] + nums[1]);
+        if (nums.Length == 1)
+            return nums[0];
+        return 0;
     }
 
     /// <summary>
