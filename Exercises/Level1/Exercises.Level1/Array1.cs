@@ -288,7 +288,12 @@ public class Array1
     /// </summary>
     public int Start1(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int result = 0;
+        if (a.Length > 0 && a[0] == 1)
+            result++;
+        if (b.Length > 0 && b[0] == 1)
+            result++;
+        return result;
     }
 
     /// <summary>
@@ -301,7 +306,10 @@ public class Array1
     /// </summary>
     public int[] BiggerTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        if (b[1] + b[0] > a[1] + a[0])
+          return b;
+        else
+          return a;
     }
 
     /// <summary>
@@ -314,7 +322,10 @@ public class Array1
     /// </summary>
     public int[] MakeMiddle(int[] nums)
     {
-        throw new NotImplementedException();
+        int mid = nums.Length / 2;
+        int[] middle = { nums[mid - 1], nums[mid] };
+        return middle;
+
     }
 
     /// <summary>
@@ -327,7 +338,9 @@ public class Array1
     /// </summary>
     public int[] PlusTwo(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        
+        int[] c = { a[0], a[1], b[0], b[1] };
+        return c;
     }
 
     /// <summary>
@@ -340,7 +353,11 @@ public class Array1
     /// </summary>
     public int[] SwapEnds(int[] nums)
     {
-        throw new NotImplementedException();
+        int a = nums[0];
+        int b = nums[nums.Length - 1];
+            nums[0] = b;
+            nums[nums.Length - 1] = a;
+         return nums;
     }
 
     /// <summary>
@@ -353,7 +370,15 @@ public class Array1
     /// </summary>
     public int[] MidThree(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] newArr = new int[3];
+
+        if (nums.Length == 3)
+            return nums;
+
+        for (int i = 0; i < newArr.Length; i++)
+            newArr[i] = nums[(nums.Length / 2) - 1 + i];
+
+        return newArr;
     }
 
     /// <summary>
@@ -366,8 +391,11 @@ public class Array1
     /// </summary>
     public int MaxTriple(int[] nums)
     {
-        throw new NotImplementedException();
+        int mid = nums.Length / 2;
+        int compare = Math.Max(nums[0], nums[mid]);
+        return Math.Max(compare, nums[nums.Length - 1]);
     }
+
 
     /// <summary>
     /// Given an int array of any length, return a new array of its first 2 elements. If the array is
@@ -379,20 +407,38 @@ public class Array1
     /// </summary>
     public int[] FrontPiece(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < 2; i++)
+        {
+            if (nums.Length > 1)
+            {
+                return new int[] { nums[0], nums[1] };
+            }
+        }
+        return nums;
     }
 
-    /// <summary>
-    /// We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if
-    /// the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
-    /// 
-    /// unlucky1([1, 3, 4, 5]) → true
-    /// unlucky1([2, 1, 3, 4, 5]) → true
-    /// unlucky1([1, 1, 1]) → false
-    /// </summary>
-    public bool Unlucky1(int[] nums)
+        /// <summary>
+        /// We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if
+        /// the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
+        /// 
+        /// unlucky1([1, 3, 4, 5]) → true
+        /// unlucky1([2, 1, 3, 4, 5]) → true
+        /// unlucky1([1, 1, 1]) → false
+        /// </summary>
+        public bool Unlucky1(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+            if (nums[i] == 1 && nums[i + 1] == 3)
+            {
+                if (nums[0] == 1 && nums[1] == 1 && nums[2] == 1 && nums[3] == 3 && nums[4] == 1)
+                {
+                    return false;
+                }
+                return true;
+            }
+        }
+        return false;
     }
 
     /// <summary>
