@@ -268,7 +268,14 @@ public class Array1
     /// </summary>
     public int[] Fix23(int[] nums)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+            if (nums[i] == 2 && nums[i + 1] == 3)
+            {
+                nums[i + 1] = 0;
+            }
+        }
+        return nums;
     }
 
     /// <summary>
