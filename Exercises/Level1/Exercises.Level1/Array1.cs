@@ -175,7 +175,7 @@ public class Array1
     /// </summary>
     public int[] MiddleWay(int[] a, int[] b)
     {
-        int[] middle = {a[1], b[1]};
+        int[] middle = { a[1], b[1] };
         return middle;
     }
 
@@ -189,8 +189,8 @@ public class Array1
     /// </summary>
     public int[] MakeEnds(int[] nums)
     {
-       
-        int [] ends  = {nums [0], nums [nums.Length-1]};
+
+        int[] ends = { nums[0], nums[nums.Length - 1] };
         return ends;
     }
 
@@ -307,9 +307,9 @@ public class Array1
     public int[] BiggerTwo(int[] a, int[] b)
     {
         if (b[1] + b[0] > a[1] + a[0])
-          return b;
+            return b;
         else
-          return a;
+            return a;
     }
 
     /// <summary>
@@ -338,7 +338,7 @@ public class Array1
     /// </summary>
     public int[] PlusTwo(int[] a, int[] b)
     {
-        
+
         int[] c = { a[0], a[1], b[0], b[1] };
         return c;
     }
@@ -355,9 +355,9 @@ public class Array1
     {
         int a = nums[0];
         int b = nums[nums.Length - 1];
-            nums[0] = b;
-            nums[nums.Length - 1] = a;
-         return nums;
+        nums[0] = b;
+        nums[nums.Length - 1] = a;
+        return nums;
     }
 
     /// <summary>
@@ -417,15 +417,15 @@ public class Array1
         return nums;
     }
 
-        /// <summary>
-        /// We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if
-        /// the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
-        /// 
-        /// unlucky1([1, 3, 4, 5]) → true
-        /// unlucky1([2, 1, 3, 4, 5]) → true
-        /// unlucky1([1, 1, 1]) → false
-        /// </summary>
-        public bool Unlucky1(int[] nums)
+    /// <summary>
+    /// We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if
+    /// the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
+    /// 
+    /// unlucky1([1, 3, 4, 5]) → true
+    /// unlucky1([2, 1, 3, 4, 5]) → true
+    /// unlucky1([1, 1, 1]) → false
+    /// </summary>
+    public bool Unlucky1(int[] nums)
     {
         for (int i = 0; i < nums.Length - 1; i++)
         {
@@ -452,7 +452,23 @@ public class Array1
     /// </summary>
     public int[] Make2(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int[] c = new int[2];
+        if (a.Length > 1)
+        {
+            c[0] = a[0];
+            c[1] = a[1];
+        }
+        else if (a.Length == 1 && b.Length > 0)
+        {
+            c[0] = a[0];
+            c[1] = b[0];
+        }
+        else if (a.Length == 0 && b.Length > 0)
+        {
+            c[0] = b[0];
+            c[1] = b[1];
+        }
+        return c;
     }
 
     /// <summary>
@@ -464,7 +480,22 @@ public class Array1
     /// front11([1, 7], []) → [1]
     /// </summary>
     public int[] Front11(int[] a, int[] b)
+
     {
-        throw new NotImplementedException();
+        if (b.Length == 0 && a.Length == 0)
+        {
+            return new int[] { };
+        }
+
+        if (a.Length == 0)
+        {
+            return new int[] { b[0] };
+        }
+        if (b.Length == 0)
+        {
+            return new int[] { a[0] };
+        }
+        return new int[] { a[0], b[0] };
     }
 }
+
