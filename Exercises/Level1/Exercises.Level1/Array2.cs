@@ -90,7 +90,21 @@ public class Array2
     /// </summary>
     public int Sum13(int[] nums)
     {
-        throw new NotImplementedException();
+        int sum = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 13 || i > 0 && nums[i - 1] == 13)
+            {
+                continue;
+            }
+            else
+            {
+                sum += nums[i];
+            }
+        }
+
+        return sum;
     }
 
     /// <summary>
